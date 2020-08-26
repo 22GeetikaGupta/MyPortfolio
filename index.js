@@ -68,6 +68,6 @@ function btnclick(){
 }
 
 function displayAbout(){
-  document.getElementsByClassName("aboutPage")[0].style.display = 'block';
+  document.getElementsByClassName("aboutPage")[0].style.display = 'flex';
 }
 initialSetup();

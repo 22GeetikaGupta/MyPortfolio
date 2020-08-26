@@ -13,7 +13,7 @@ body{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   overflow-x: hidden;
   /*padding-top: 20px;*/
   color: white;
@@ -115,7 +115,7 @@ button{
 	cursor: pointer;
 	vertical-align: bottom;
 	font-family: 'Alata', sans-serif;
-
+	overflow: hidden;
 }
 
 button:hover{
@@ -133,15 +133,18 @@ button:hover{
 }
 
 .aboutPage{
+	padding: 10px;
 	position: relative;
 	width: 70%;
 	height: 70%;
 	float: right;
 	display: none;
+	flex-direction: column;
 	color: white;
 	top: 20%;
 	margin-right: 10%;
 	background-color: black;
+	box-shadow: 5px 10px #AEB6BF;
 	animation: aboutanim 2s 1;
 }
 
@@ -152,5 +155,31 @@ button:hover{
 	to{
 		width: 70%;
 	}
+}
+
+.aboutPage h2{
+	color: rgb(212,175,55);
+	letter-spacing: 5px;
+	text-align: center;
+	padding-bottom: 5px;
+	border-bottom: 2px solid rgb(212,175,55);
+}
+
+.aboutPage .aboutPart{
+	display: flex;
+	flex-direction: row;
+}
+
+.aboutPart img{
+	float: left;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin: 10px;
+}
+
+.aboutPart div{
+	padding: 10px;
+	color: white;
 }
 

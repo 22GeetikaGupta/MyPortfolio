@@ -64,10 +64,12 @@ function initialSetup() {
 }
 
 function btnclick(){
+  document.getElementById("sideNavBar").style.animationName = 'navbar';
+  document.getElementById("sideNavBar").style.animationDuration = '1s';
   document.getElementById("sideNavBar").style.display = 'flex';
 }
 
-function displayAbout(){
+function displayMenuItem(){
   const menuitem = document.querySelectorAll('.menuitem');
   let index1=-1;
   menuitem.forEach((item, index) => {
@@ -77,40 +79,79 @@ function displayAbout(){
       index1 = index;
     }
   });
+  return index1;
+}
+
+function displayAbout(){
+  let index1 = displayMenuItem();
   if(index1!==-1){
       setTimeout(()=>{
         document.getElementsByClassName("menuitem")[index1].style.display = 'none';
         document.getElementsByClassName("aboutPage")[0].style.display = 'flex';
-        document.getElementsByClassName("aboutPage")[0].style.animationName = 'aboutanim';
+        document.getElementsByClassName("aboutPage")[0].style.animationName = 'menuanim';
         document.getElementsByClassName("aboutPage")[0].style.animationDuration = '2s';
       }, 800);
   }
   else{
     document.getElementsByClassName("aboutPage")[0].style.display = 'flex';
+    document.getElementsByClassName("aboutPage")[0].style.animationName = 'menuanim';
+    document.getElementsByClassName("aboutPage")[0].style.animationDuration = '2s';
   }
-
-  
 }
 
 function displaysome(){
-  const menuitem = document.querySelectorAll('.menuitem');
-  let index1=-1;
-  menuitem.forEach((item, index) => {
-    if(item.style.display == 'flex'){
-      item.style.animationName = 'reverseanim';
-      item.style.animationDuration = '1s';
-      index1 = index;
-    }
-  });
-  setTimeout(()=>{
-    if(index1!=-1){
-      document.getElementsByClassName("menuitem")[index1].style.display = 'none';
-    }
+  let index1 = displayMenuItem();
+  if(index1!==-1){
+      setTimeout(()=>{
+        document.getElementsByClassName("menuitem")[index1].style.display = 'none';
+        document.getElementsByClassName("educationPage")[0].style.display = 'flex';
+        document.getElementsByClassName("educationPage")[0].style.animationName = 'menuanim';
+        document.getElementsByClassName("educationPage")[0].style.animationDuration = '2s';
+      }, 800);
+  }
+  else{
+    document.getElementsByClassName("educationPage")[0].style.display = 'flex';
+    document.getElementsByClassName("educationPage")[0].style.animationName = 'menuanim';
+    document.getElementsByClassName("educationPage")[0].style.animationDuration = '2s';
+  }
+  
+}
+
+function displayExperience(){
+  let index1 = displayMenuItem();
+  if(index1!==-1){
+      setTimeout(()=>{
+        document.getElementsByClassName("menuitem")[index1].style.display = 'none';
+        document.getElementsByClassName("internship")[0].style.display = 'flex';
+        document.getElementsByClassName("internship")[0].style.animationName = 'menuanim';
+        document.getElementsByClassName("internship")[0].style.animationDuration = '2s';
+      }, 800);
+  }
+  else{
+    document.getElementsByClassName("internship")[0].style.display = 'flex';
+    document.getElementsByClassName("internship")[0].style.animationName = 'menuanim';
+    document.getElementsByClassName("internship")[0].style.animationDuration = '2s';
+  }
+}
+
+
+function hidemenu(){
+  let index = displayMenuItem();
+  document.getElementById("sideNavBar").style.animationName = 'revnavbar';
+  document.getElementById("sideNavBar").style.animationDuration = '1s';
+  if(index != -1){
+    setTimeout(()=>{
+      document.getElementsByClassName("menuitem")[index].style.display = 'none';
+      document.getElementById("sideNavBar").style.display = 'none';
+      
+    }, 800);
     
-    document.getElementsByClassName("some")[0].style.display = 'flex';
-    document.getElementsByClassName("some")[0].style.animationName = 'aboutanim';
-        document.getElementsByClassName("some")[0].style.animationDuration = '2s';
-  }, 800);
+  }
+  else{
+    setTimeout(()=>{
+      document.getElementById("sideNavBar").style.display = 'none';
+    }, 800);
+  }
   
 }
 initialSetup();

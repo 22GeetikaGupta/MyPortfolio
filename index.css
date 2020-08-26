@@ -7,7 +7,7 @@ body{
 #sideNavBar {
   height: 100%;
   width: 10%;
-  display: flex;
+  display: none;
   flex-direction: column;
   position: fixed;
   z-index: 1;
@@ -17,6 +17,16 @@ body{
   overflow-x: hidden;
   /*padding-top: 20px;*/
   color: white;
+  animation: navbar 1.5s 1;
+}
+
+@keyframes navbar{
+	from{
+		width: 0%;
+	}
+	to{
+		width: 10%;
+	}
 }
 
 #sideNavBar a{
@@ -52,8 +62,9 @@ body{
 
 .introCard{
 	text-align: center;
+	align-items: center;
 	position: relative;
-	top: 40%;
+	top: 30%;
 }
 
 .introCard h1{
@@ -85,6 +96,38 @@ body{
 .introCard p{
 	font-size: 30px;
 	color: white;
+}
+
+button{
+	width: 200px;
+	margin: auto;
+	margin-top: 50px;
+	padding: 10px;
+	display: none;
+	animation: btnanim 3s 1;
+	border-radius: 20px;
+	height: 50px;
+	font-size: 20px;
+	border: none;
+	background-color: #9BCF4B;
+	cursor: pointer;
+	vertical-align: bottom;
+	font-family: 'Alata', sans-serif;
+
+}
+
+button:hover{
+	background-color: #344E0B;
+	color: white;
+}
+
+@keyframes btnanim{
+	from{
+		width: 80px;
+	}
+	to{
+		width: 200px;
+	}
 }
 
 .box{

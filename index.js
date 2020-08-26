@@ -54,3 +54,17 @@ window.onload = function() {
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
 };
+
+function initialSetup() {
+  if (document.getElementsByClassName("MyPortBtn") != null) {
+    setTimeout(function() {
+      document.getElementsByClassName("MyPortBtn")[0].style.display = 'block';
+    }, 3000);
+  }
+}
+
+function btnclick(){
+  document.getElementById("sideNavBar").style.display = 'flex';
+}
+
+initialSetup();

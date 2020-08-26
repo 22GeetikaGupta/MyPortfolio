@@ -155,7 +155,7 @@ button:hover{
 	display: none;
 	flex-direction: column;
 	color: white;
-	top: 20%;
+	top: 15%;
 	margin-right: 10%;
 	background-color: black;
 	border-radius: 5%;
@@ -210,6 +210,7 @@ button:hover{
 
 .educationPage{
 	padding: 20px;
+	top: 15%;
 	/*background-color: rgba(212, 175, 55, 0.7);*/
 }
 
@@ -257,13 +258,16 @@ button:hover{
 }
 
 .inthead{
+	width: auto;
 	margin: auto;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 .inthead h2{
 	color: rgb(212,175,55);
 	letter-spacing: 5px;
 	text-align: center;
-	padding-bottom: 5px;
 	border-bottom: 2px solid rgb(212,175,55);
 }
 
@@ -272,10 +276,14 @@ button:hover{
 }
 
 .internship{
-	top: 10%;
-	height: 80%;
+	top: 5%;
+	height: 85%;
 }
 
+.intern{
+	margin-top: 0;
+	padding: 0;
+}
 .intern li{
   margin: 20px;
   margin-top: 0px;
@@ -299,7 +307,9 @@ button:hover{
 .face.face1{
   vertical-align: top;
     position: relative;
-    background: #333;
+    background-color: #80A4A4;
+    background-image: linear-gradient(to right, #466969 , #80A4A4);
+    /*background-color: #140625;*/
     display: flex;
     justify-content: center;
     align-items: center;

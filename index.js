@@ -117,7 +117,7 @@ function displaysome(){
   
 }
 
-function displayExperience(){
+function displayInternship(){
   let index1 = displayMenuItem();
   if(index1!==-1){
       setTimeout(()=>{
@@ -131,6 +131,23 @@ function displayExperience(){
     document.getElementsByClassName("internship")[0].style.display = 'flex';
     document.getElementsByClassName("internship")[0].style.animationName = 'menuanim';
     document.getElementsByClassName("internship")[0].style.animationDuration = '2s';
+  }
+}
+
+function displayExperience(){
+  let index1 = displayMenuItem();
+  if(index1!==-1){
+      setTimeout(()=>{
+        document.getElementsByClassName("menuitem")[index1].style.display = 'none';
+        document.getElementsByClassName("experience")[0].style.display = 'flex';
+        document.getElementsByClassName("experience")[0].style.animationName = 'menuanim';
+        document.getElementsByClassName("experience")[0].style.animationDuration = '2s';
+      }, 800);
+  }
+  else{
+    document.getElementsByClassName("experience")[0].style.display = 'flex';
+    document.getElementsByClassName("experience")[0].style.animationName = 'menuanim';
+    document.getElementsByClassName("experience")[0].style.animationDuration = '2s';
   }
 }
 

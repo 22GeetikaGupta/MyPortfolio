@@ -68,6 +68,49 @@ function btnclick(){
 }
 
 function displayAbout(){
-  document.getElementsByClassName("aboutPage")[0].style.display = 'flex';
+  const menuitem = document.querySelectorAll('.menuitem');
+  let index1=-1;
+  menuitem.forEach((item, index) => {
+    if(item.style.display === 'flex'){
+      item.style.animationName = 'reverseanim';
+      item.style.animationDuration = '1s';
+      index1 = index;
+    }
+  });
+  if(index1!==-1){
+      setTimeout(()=>{
+        document.getElementsByClassName("menuitem")[index1].style.display = 'none';
+        document.getElementsByClassName("aboutPage")[0].style.display = 'flex';
+        document.getElementsByClassName("aboutPage")[0].style.animationName = 'aboutanim';
+        document.getElementsByClassName("aboutPage")[0].style.animationDuration = '2s';
+      }, 800);
+  }
+  else{
+    document.getElementsByClassName("aboutPage")[0].style.display = 'flex';
+  }
+
+  
+}
+
+function displaysome(){
+  const menuitem = document.querySelectorAll('.menuitem');
+  let index1=-1;
+  menuitem.forEach((item, index) => {
+    if(item.style.display == 'flex'){
+      item.style.animationName = 'reverseanim';
+      item.style.animationDuration = '1s';
+      index1 = index;
+    }
+  });
+  setTimeout(()=>{
+    if(index1!=-1){
+      document.getElementsByClassName("menuitem")[index1].style.display = 'none';
+    }
+    
+    document.getElementsByClassName("some")[0].style.display = 'flex';
+    document.getElementsByClassName("some")[0].style.animationName = 'aboutanim';
+        document.getElementsByClassName("some")[0].style.animationDuration = '2s';
+  }, 800);
+  
 }
 initialSetup();

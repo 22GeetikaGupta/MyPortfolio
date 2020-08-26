@@ -13,7 +13,8 @@ body{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  /*background-color: rgba(167, 205, 233, 0.2);*/
+  background-color: rgba(0,0,0, 0.3);
   overflow-x: hidden;
   /*padding-top: 20px;*/
   color: white;
@@ -133,7 +134,9 @@ button:hover{
 }
 
 .aboutPage{
+	z-index: 5;
 	padding: 10px;
+	overflow: hidden;
 	position: relative;
 	width: 70%;
 	height: 70%;
@@ -144,6 +147,7 @@ button:hover{
 	top: 20%;
 	margin-right: 10%;
 	background-color: black;
+	border-radius: 5%;
 	box-shadow: 5px 10px #AEB6BF;
 	animation: aboutanim 2s 1;
 }
@@ -183,3 +187,30 @@ button:hover{
 	color: white;
 }
 
+.some{
+	z-index: 5;
+	padding: 10px;
+	position: relative;
+	width: 70%;
+	height: 70%;
+	float: right;
+	display: none;
+	flex-direction: column;
+	color: white;
+	top: 20%;
+	margin-right: 10%;
+	background-color: black;
+	border-radius: 5%;
+	overflow: hidden;
+	box-shadow: 5px 10px #AEB6BF;
+	animation: aboutanim 2s 1;
+}
+
+@keyframes reverseanim{
+	from{
+		width: 70%;
+	}
+	to{
+		width: 0%;
+	}
+}

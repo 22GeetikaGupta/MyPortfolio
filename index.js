@@ -67,4 +67,7 @@ function btnclick(){
   document.getElementById("sideNavBar").style.display = 'flex';
 }
 
+function displayAbout(){
+  document.getElementsByClassName("aboutPage")[0].style.display = 'block';
+}
 initialSetup();

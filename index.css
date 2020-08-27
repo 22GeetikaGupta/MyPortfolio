@@ -18,22 +18,22 @@ body{
   overflow-x: hidden;
   /*padding-top: 20px;*/
   color: white;
-  animation: navbar 1.5s 1;
+  animation: navbar 0.2s 1;
 }
 
 @keyframes navbar{
 	from{
 		width: 0%;
 	}
-	to{
+	/*to{
 		width: 13%;
-	}
+	}*/
 }
 
 @keyframes revnavbar{
-	from{
+	/*from{
 		width: 13%;
-	}
+	}*/
 	to{
 		width: 0%;
 	}
@@ -96,7 +96,6 @@ body{
 		margin-bottom: -40%;
 	}
 	30%{
-		color: #1F8951;
 		letter-spacing: 25px;
 		margin-bottom: -40px;
 	}
@@ -150,12 +149,13 @@ button:hover{
 	overflow: hidden;
 	position: relative;
 	width: 70%;
-	height: 70%;
+	/*height: 70%;*/
 	float: right;
 	display: none;
 	flex-direction: column;
 	color: white;
 	top: 15%;
+	/*margin-top: auto;*/
 	margin-right: 10%;
 	background-color: black;
 	border-radius: 5%;
@@ -163,13 +163,25 @@ button:hover{
 	animation: menuanim 2s 1;
 }
 
+.close {
+  cursor: pointer;
+  /*position: absolute;*/
+  float: right;
+  top: 50%;
+  right: 0%;
+  padding: 12px 16px;
+  /*font-size: 50px;*/
+  transform: translate(0%, -50%);
+  color: gray;
+}
+
 @keyframes menuanim{
 	from{
 		width: 0%;
 	}
-	to{
+	/*to{
 		width: 70%;
-	}
+	}*/
 }
 
 @keyframes reverseanim{
@@ -195,6 +207,32 @@ button:hover{
 	flex-direction: row;
 }
 
+@media screen and (max-width: 900px){
+	.aboutPage .aboutPart{
+		display: block;
+	}
+
+	#sideNavBar{
+		width: 100%;
+		background-color: rgba(0,0,0);
+	}
+
+	.menuitem{
+		width: 90%;
+		float: none;
+		margin: auto;
+		top: 5%;
+	}
+}
+
+@keyframes smallscreennav{
+	from{
+		width: 0%;
+	}
+	to{
+		width: 100%;
+	}
+}
 .aboutPart img{
 	float: left;
 	width: 200px;
@@ -210,14 +248,15 @@ button:hover{
 
 .educationPage{
 	padding: 20px;
-	top: 15%;
+	top: 5%;
+	margin-top: auto;
 	/*background-color: rgba(212, 175, 55, 0.7);*/
 }
 
 .eduhead{
 	margin: auto;
 }
-.eduhead h2{
+.educationPage h2{
 	color: rgb(212,175,55);
 	letter-spacing: 5px;
 	text-align: center;
@@ -227,20 +266,22 @@ button:hover{
 
 .edupart{
 	display: flex;
-	height: 80%;
+	/*height: 80%;*/
+	height: auto;
 	flex-direction: column;
 	justify-content: space-around;
 
 }
 
 .edupart div{
-	width: 80%;
+	width: 90%;
 	height: 25%;
 	margin: auto;
+	margin-top: 10px;
 	background-color: white;
 	color: black;
 	padding: 10px;
-	line-height: 0.5;
+	/*line-height: 0.5;*/
 }
 
 
@@ -257,14 +298,14 @@ button:hover{
 	color: rgb(20, 6, 37);
 }
 
-.inthead{
-	width: auto;
-	margin: auto;
-	padding: 0;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-.inthead h2{
+/*.internship h2{
+	/*width: auto;*/
+	/*margin: auto;*/
+	/*padding: 0;*/
+	/*margin-top: 0;*/
+	/*margin-bottom: 0;*/
+/*}*/
+.internship h2{
 	color: rgb(212,175,55);
 	letter-spacing: 5px;
 	text-align: center;
@@ -276,8 +317,10 @@ button:hover{
 }
 
 .internship{
-	top: 5%;
-	height: 85%;
+	/*top: 5%;*/
+	/*height: 85%;*/
+	margin-top: auto;
+	height: auto;
 }
 
 .intern{
@@ -377,4 +420,18 @@ button:hover{
 .card .face.face2 .content a:hover{
     background: #333;
     color: #fff;
+}
+
+
+.msg{
+	color: white;
+	text-align: center;
+	letter-spacing: 8px;
+	color: gray;
+}
+
+@media screen and (max-width: 900px){
+	.msg{
+		color: black;
+	}
 }

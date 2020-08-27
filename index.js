@@ -69,9 +69,9 @@ function btnclick(){
   document.getElementById("sideNavBar").style.display = 'flex';
 }
 
-function displayMenuItem(){
+function closeBtn(){
   const menuitem = document.querySelectorAll('.menuitem');
-  let index1=-1;
+  let index1;
   menuitem.forEach((item, index) => {
     if(item.style.display === 'flex'){
       item.style.animationName = 'reverseanim';
@@ -79,14 +79,45 @@ function displayMenuItem(){
       index1 = index;
     }
   });
+  document.getElementsByClassName("menuitem")[index1].animationName = 'reverseanim';
+  document.getElementsByClassName("menuitem")[index1].animationDuration = '1s';
+  document.getElementById("sideNavBar").style.animationName = 'navbar';
+  document.getElementById("sideNavBar").style.animationDuration = '1s';
+  setTimeout(()=>{
+    document.getElementById("sideNavBar").style.display = 'flex';
+    document.getElementsByClassName("menuitem")[index1].style.display = 'none';
+  }, 800);
+}
+
+function displayMenuItem(){
+  // console.log(screen.width + " " + screen.height);
+  if(screen.width <= 900){
+    document.getElementById("sideNavBar").style.animationName = 'revnavbar';
+    document.getElementById("sideNavBar").style.animationDuration = '1s';
+    setTimeout(()=>{
+      document.getElementById("sideNavBar").style.display='none';
+    }, 800);
+  }
+  const menuitem = document.querySelectorAll('.menuitem');
+  let index1=[];
+  menuitem.forEach((item, index) => {
+    if(item.style.display === 'flex'){
+      item.style.animationName = 'reverseanim';
+      item.style.animationDuration = '1s';
+      index1.push(index);
+    }
+  });
   return index1;
 }
 
 function displayAbout(){
   let index1 = displayMenuItem();
-  if(index1!==-1){
+  if(index1.length!==0){
       setTimeout(()=>{
-        document.getElementsByClassName("menuitem")[index1].style.display = 'none';
+        for(let i=0; i<index1.length; i++){
+          document.getElementsByClassName("menuitem")[index1[i]].style.display = 'none';
+        }
+        
         document.getElementsByClassName("aboutPage")[0].style.display = 'flex';
         document.getElementsByClassName("aboutPage")[0].style.animationName = 'menuanim';
         document.getElementsByClassName("aboutPage")[0].style.animationDuration = '2s';
@@ -101,9 +132,12 @@ function displayAbout(){
 
 function displaysome(){
   let index1 = displayMenuItem();
-  if(index1!==-1){
+  if(index1.length!==0){
       setTimeout(()=>{
-        document.getElementsByClassName("menuitem")[index1].style.display = 'none';
+        for(let i=0; i<index1.length; i++){
+          document.getElementsByClassName("menuitem")[index1[i]].style.display = 'none';
+        }
+        
         document.getElementsByClassName("educationPage")[0].style.display = 'flex';
         document.getElementsByClassName("educationPage")[0].style.animationName = 'menuanim';
         document.getElementsByClassName("educationPage")[0].style.animationDuration = '2s';
@@ -119,9 +153,12 @@ function displaysome(){
 
 function displayInternship(){
   let index1 = displayMenuItem();
-  if(index1!==-1){
+  if(index1.length!==0){
       setTimeout(()=>{
-        document.getElementsByClassName("menuitem")[index1].style.display = 'none';
+        for(let i=0; i<index1.length; i++){
+          document.getElementsByClassName("menuitem")[index1[i]].style.display = 'none';
+        }
+        
         document.getElementsByClassName("internship")[0].style.display = 'flex';
         document.getElementsByClassName("internship")[0].style.animationName = 'menuanim';
         document.getElementsByClassName("internship")[0].style.animationDuration = '2s';
@@ -136,9 +173,12 @@ function displayInternship(){
 
 function displayExperience(){
   let index1 = displayMenuItem();
-  if(index1!==-1){
+  if(index1.length!==-1){
       setTimeout(()=>{
-        document.getElementsByClassName("menuitem")[index1].style.display = 'none';
+        for(let i=0; i<index1.length; i++){
+          document.getElementsByClassName("menuitem")[index1[i]].style.display = 'none';
+        }
+        
         document.getElementsByClassName("experience")[0].style.display = 'flex';
         document.getElementsByClassName("experience")[0].style.animationName = 'menuanim';
         document.getElementsByClassName("experience")[0].style.animationDuration = '2s';
@@ -156,9 +196,9 @@ function hidemenu(){
   let index = displayMenuItem();
   document.getElementById("sideNavBar").style.animationName = 'revnavbar';
   document.getElementById("sideNavBar").style.animationDuration = '1s';
-  if(index != -1){
+  if(index.length !== 0){
     setTimeout(()=>{
-      document.getElementsByClassName("menuitem")[index].style.display = 'none';
+      document.getElementsByClassName("menuitem")[index[0]].style.display = 'none';
       document.getElementById("sideNavBar").style.display = 'none';
       
     }, 800);

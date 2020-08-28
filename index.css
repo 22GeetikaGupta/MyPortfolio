@@ -1,6 +1,6 @@
 body{
 	/*background-image: url("https://images.unsplash.com/photo-1562721880-63b7e6d62e9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=90");*/
-	background-image: url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=90");
+	background-image: url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=250");
 	font-family: 'Alata', sans-serif;
 }
 
@@ -518,4 +518,128 @@ button:hover{
 	padding-bottom: 5px;
 	border-bottom: 2px solid rgb(212,175,55);
 }
+
+.skills{
+	top: 5%;
+}
+
+.skills h2{
+	color: rgb(212,175,55);
+	letter-spacing: 5px;
+	text-align: center;
+	padding-bottom: 5px;
+	border-bottom: 2px solid rgb(212,175,55);
+}
+
+.skillPart{
+	padding: 0px 20px;
+}
+
+
+.skill{
+	margin: 10px;
+}
+
+.myProgress {
+  width: 100%;
+  border-radius: 20px;
+  background-color: #ddd;
+  overflow: hidden;
+}
+
+@keyframes anim{
+	from{
+		width: 0%;
+	}
+}
+
+#cpp{
+  width: 90%;
+  height: 30px;
+  background-color: #4CAF50;
+  animation: anim 2s;
+  animation-delay: 1s;
+}
+
+#c{
+  width: 70%;
+  height: 30px;
+  background-color: #5DCAC3;
+  animation: anim 2s;
+  animation-delay: 1s;
+}
+
+#java{
+  width: 70%;
+  height: 30px;
+  background-color: #CA8B5D;
+  animation: anim 2s;
+  animation-delay: 1s;
+}
+
+#python{
+  width: 70%;
+  height: 30px;
+  background-color: #AC4C88;
+  animation: anim 2s;
+  animation-delay: 1s;
+}
+
+#html{
+  width: 95%;
+  height: 30px;
+  background-color: #0A445D;
+  animation: anim 2s;
+  animation-delay: 1s;
+}
+
+#css{
+  width: 95%;
+  height: 30px;
+  background-color: #4CAF50;
+  animation: anim 2s;
+  animation-delay: 1s;
+}
+
+#js{
+  width: 70%;
+  height: 30px;
+  background-color: #5DCAC3;
+  animation: anim 2s;
+  animation-delay: 1s;
+}
+
+#react{
+  width: 60%;
+  height: 30px;
+  background-color: #4CAF50;
+  animation: anim 2s;
+  animation-delay: 1s;
+}
+
+#node{
+  width: 60%;
+  height: 30px;
+  background-color: #AC4C88;
+  animation: anim 2s;
+  animation-delay: 1s;
+}
+
+#sql{
+  width: 80%;
+  height: 30px;
+  background-color: #4CAF50;
+  animation: anim 2s;
+  animation-delay: 1s;
+}
+
+#Psql{
+  width: 80%;
+  height: 30px;
+  background-color: #CA8B5D;
+  animation: anim 2s;
+  animation-delay: 1s;
+}
+
+
 

@@ -211,6 +211,26 @@ function displayProjects(){
   }
 }
 
+function displaySkills(){
+  let index1 = displayMenuItem();
+  if(index1.length!==0){
+      setTimeout(()=>{
+        for(let i=0; i<index1.length; i++){
+          document.getElementsByClassName("menuitem")[index1[i]].style.display = 'none';
+        }
+        
+        document.getElementsByClassName("skills")[0].style.display = 'flex';
+        document.getElementsByClassName("skills")[0].style.animationName = 'menuanim';
+        document.getElementsByClassName("skills")[0].style.animationDuration = '2s';
+      }, 800);
+  }
+  else{
+    document.getElementsByClassName("skills")[0].style.display = 'flex';
+    document.getElementsByClassName("skills")[0].style.animationName = 'menuanim';
+    document.getElementsByClassName("skills")[0].style.animationDuration = '2s';
+  }
+}
+
 function hidemenu(){
   let index = displayMenuItem();
   document.getElementById("sideNavBar").style.animationName = 'revnavbar';

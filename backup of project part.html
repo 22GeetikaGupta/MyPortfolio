@@ -1,0 +1,191 @@
+<div class="project">
+				<img src="hospitalApp.png" class="projectImage">
+				<div onClick="showProject(0)" class="projectmain">
+					<h3 class="projectName">Hospital Management Application</h3>
+				</div>
+				<div class="projectdiscription hospitalApp">
+					<h3>Hospital Management Application<span onClick="closedesc(0)" class="close" style="font-size: 50px;">&times;</span></h3>
+					<h4>About : </h4>
+					<p>It is a desktop Application which I created during my industrial training of java at SCA.</p>
+					<p>This app consist of various features such as maintaining appointments, keeping record of doctors, patients and other staff etc...</p>
+					<h4>Technologies used : Java, Mysql</h4>
+					<h4>IDE : NetBeans</h4>
+				</div>
+			</div>
+
+			<div class="project">
+				<img src="bill.png" class="projectImage">
+				<div onClick="showProject(1)" class="projectmain">
+					<h3 class="projectName">MediAssist - Java Application</h3>
+				</div>
+				<div class="projectdiscription hospitalApp">
+					<h3>MediAssist - Java Application<span onClick="closedesc(1)" class="close" style="font-size: 50px;">&times;</span></h3>
+					<h4>About : </h4>
+					<p>This desktop application can be used in medical stores. It includes bill generation, user management, stock management, customer information etc...</p>
+					<h4>Technologies used : Java, Mysql, Swing</h4>
+					<h4>IDE : Intellij</h4>
+				</div>
+			</div>
+
+			<div class="project">
+				<img src="profitAnalysis.png" class="projectImage">
+				<div onClick="showProject(2)" class="projectmain">
+					<h3 class="projectName">MediAssist - Python Application</h3>
+				</div>
+				<div class="projectdiscription hospitalApp">
+					<h3>MediAssist - Python Application<span onClick="closedesc(2)" class="close" style="font-size: 50px;">&times;</span></h3>
+					<h4>About : </h4>
+					<p>This app is created for the analysis purpose. It includes profit analysis, sales analysis, stock analysis etc...It will also notify the user Whenever an item is about to run out of stock.</p>
+					<h4>Technologies used : Python, Mysql, Tkinter</h4>
+					<h4>IDE : Spyder</h4>
+				</div>
+			</div>
+
+			<div class="project">
+				<img src="quizApp.png" class="projectImage">
+				<div onClick="showProject(3)" class="projectmain">
+					<h3 class="projectName">Quiz Application</h3>
+				</div>
+				<div class="projectdiscription hospitalApp">
+					<h3>Quiz Application<span onClick="closedesc(3)" class="close" style="font-size: 50px;">&times;</span></h3>
+					<h4>About : </h4>
+					<p>I created this app while practicing Reactjs. As the user clicks on play button a instruction page wwill appear followed by quiz. There will be 15 questions and each question will have 4 options. The user will be given 2 min time and also there are some lifelines like 50-50 and hint.</p>
+					<h4>Technologies used : Reactjs</h4>
+					<h4>IDE : Sublime Text</h4>
+				</div>
+			</div>
+
+			<div class="project">
+				<img src="snake.png" class="projectImage">
+				<div onClick="showProject(4)" class="projectmain">
+					<h3 class="projectName">Snake game</h3>
+				</div>
+				<div class="projectdiscription hospitalApp">
+					<h3>Snake Game<span onClick="closedesc(4)" class="close" style="font-size: 50px;">&times;</span></h3>
+					<h4>About : </h4>
+					<p>One of the most popular game that we used to play in keypad mobiles.</p>
+					<h4>Technologies used : HTML, CSS, JavaScript</h4>
+					<h4>IDE : Sublime Text</h4>
+				</div>
+			</div>
+
+			<div class="project">
+				<img src="ics.png" class="projectImage">
+				<div onClick="showProject(5)" class="projectmain">
+					<h3 class="projectName">ICS Website</h3>
+				</div>
+				<div class="projectdiscription hospitalApp">
+					<h3>ICS Website<span onClick="closedesc(5)" class="close" style="font-size: 50px;">&times;</span></h3>
+					<h4>About : </h4>
+					<p>Institute of civil services (ICS) Academy is a prestigious institute in bhopal for the preparation of civil services. I with a team of 2 developed this website. It allows to post daily affairs and more.</p>
+					<h4>Technologies used : HTML, CSS, JavaScript, Node.js, PostgreSql</h4>
+					<h4>IDE : Sublime Text</h4>
+				</div>
+			</div>
+
+
+
+-----------------CSS----------------------------------------
+
+.project{
+	display: inline-block;
+	width: 350px;
+	height: 300px;
+	margin: 10px;
+}
+
+.projectImage{
+	width: 350px;
+	height: 300px;
+}
+
+.projectmain {
+  /*background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(209,239,232, 0.7); 
+ /*background-color: #D1EFE8;*/
+  font-weight: bold;
+  position: relative;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  /*height: 100%;*/
+}
+
+.projectmain h3{
+	color: #2980b9;
+	font-size: 20px;
+	font-weight: 20px;
+}
+
+.projectdiscription{
+	z-index: 20;
+	background-image: linear-gradient(to right, #466969 , #80A4A4);
+	position: absolute;
+	/*bottom: 10%;*/
+	overflow: hidden;
+  	left: 50%;
+  	top: 50%;
+  	transform: translate(-50%, -50%);
+  	display: none;
+  	padding: 20px;
+  	width: 50%;
+  	margin: auto;
+  	height: auto;
+  	border: 2px solid #D1EFE8;
+  	animation: discanim 0.5s 1;
+}
+
+@keyframes discanim{
+	from{
+		width: 0%;
+	}
+}
+
+@keyframes revdesc{
+	to{
+		width: 0%;
+	}
+}
+
+.projectdiscription h3{
+	text-align: center;
+	color: white;
+	margin: 10px;
+}
+
+.projectdiscription .close{
+	color: black;
+}
+
+
+-------------------JAVASCRIPT--------------------------
+
+
+const showProject = (i => {
+  const allproject = document.querySelectorAll('.projectdiscription');
+  allproject.forEach(pr => {
+    if(pr.style.display === 'block'){
+      pr.style.display = none;
+    }
+  });
+    document.getElementsByClassName("projectdiscription")[i].style.animationName = 'discanim';
+    document.getElementsByClassName("projectdiscription")[i].style.animationDuration = '0.5s';
+    setTimeout(()=>{
+      document.getElementsByClassName("projectdiscription")[i].style.display = 'block';
+    }, 400);
+  
+});
+
+
+function closedesc(i){
+  document.getElementsByClassName("projectdiscription")[i].style.animationName = 'revdesc';
+  document.getElementsByClassName("projectdiscription")[i].style.animationDuration = '0.5s';
+  setTimeout(()=>{
+    document.getElementsByClassName("projectdiscription")[i].style.display = 'none';
+  }, 400);
+  
+}

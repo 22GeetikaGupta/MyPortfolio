@@ -251,29 +251,6 @@ function hidemenu(){
   
 }
 
-const showProject = (i => {
-  const allproject = document.querySelectorAll('.projectdiscription');
-  allproject.forEach(pr => {
-    if(pr.style.display === 'block'){
-      pr.style.display = none;
-    }
-  });
-    document.getElementsByClassName("projectdiscription")[i].style.animationName = 'discanim';
-    document.getElementsByClassName("projectdiscription")[i].style.animationDuration = '0.5s';
-    setTimeout(()=>{
-      document.getElementsByClassName("projectdiscription")[i].style.display = 'block';
-    }, 400);
-  
-});
 
-
-function closedesc(i){
-  document.getElementsByClassName("projectdiscription")[i].style.animationName = 'revdesc';
-  document.getElementsByClassName("projectdiscription")[i].style.animationDuration = '0.5s';
-  setTimeout(()=>{
-    document.getElementsByClassName("projectdiscription")[i].style.display = 'none';
-  }, 400);
-  
-}
 
 initialSetup();

@@ -536,24 +536,42 @@ button:hover{
 	margin-bottom: 10px;
 }
 
+.project .projectimg{
+	width: 40%;
+	overflow: visible;
+}
+
 .project img{
 	width: 300px;
+	display: inline-block;
+	margin: auto;
 }
 
 .project .aboutProject{
 	width: 60%;
+	display: inline-block;
 }
 
 .even .aboutProject{
 	float: right;
 }
 
-.odd img{
+.odd .projectimg{
 	float: right;
 }
 
 .odd .aboutProject{
 	float: left;
+}
+
+@media screen and (max-width: 900px){
+	.project .projectimg{
+		width: 100%;
+	}
+
+	.project .aboutProject{
+		width: 100%;
+	}
 }
 
 .skills{

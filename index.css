@@ -556,12 +556,25 @@ button:hover{
 	float: right;
 }
 
+.even .projectimg{
+	float: left;
+}
+
 .odd .projectimg{
 	float: right;
 }
 
 .odd .aboutProject{
 	float: left;
+}
+
+.projectPart h3{
+	color: #8DCCBD;
+	letter-spacing: 3px;
+} 
+
+.projectPart h4{
+	color: #8DCCBD;
 }
 
 @media screen and (max-width: 900px){

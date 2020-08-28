@@ -536,7 +536,6 @@ button:hover{
 .projectImage{
 	width: 350px;
 	height: 300px;
-	filter: blur(2px);
 }
 
 .projectmain {

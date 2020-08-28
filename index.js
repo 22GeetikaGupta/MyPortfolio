@@ -59,13 +59,13 @@ function initialSetup() {
   if (document.getElementsByClassName("MyPortBtn") != null) {
     setTimeout(function() {
       document.getElementsByClassName("MyPortBtn")[0].style.display = 'block';
-    }, 3000);
+    }, 1000);
   }
 }
 
 function btnclick(){
   document.getElementById("sideNavBar").style.animationName = 'navbar';
-  document.getElementById("sideNavBar").style.animationDuration = '1s';
+  document.getElementById("sideNavBar").style.animationDuration = '0.5s';
   document.getElementById("sideNavBar").style.display = 'flex';
 }
 
@@ -75,25 +75,25 @@ function closeBtn(){
   menuitem.forEach((item, index) => {
     if(item.style.display === 'flex'){
       item.style.animationName = 'reverseanim';
-      item.style.animationDuration = '1s';
+      item.style.animationDuration = '0.5s';
       index1 = index;
     }
   });
   document.getElementsByClassName("menuitem")[index1].animationName = 'reverseanim';
-  document.getElementsByClassName("menuitem")[index1].animationDuration = '1s';
+  document.getElementsByClassName("menuitem")[index1].animationDuration = '0.5s';
   document.getElementById("sideNavBar").style.animationName = 'navbar';
-  document.getElementById("sideNavBar").style.animationDuration = '1s';
+  document.getElementById("sideNavBar").style.animationDuration = '0.5s';
   setTimeout(()=>{
     document.getElementById("sideNavBar").style.display = 'flex';
     document.getElementsByClassName("menuitem")[index1].style.display = 'none';
-  }, 800);
+  }, 400);
 }
 
 function displayMenuItem(){
   // console.log(screen.width + " " + screen.height);
   if(screen.width <= 900){
     document.getElementById("sideNavBar").style.animationName = 'revnavbar';
-    document.getElementById("sideNavBar").style.animationDuration = '1s';
+    document.getElementById("sideNavBar").style.animationDuration = '0.5s';
     setTimeout(()=>{
       document.getElementById("sideNavBar").style.display='none';
     }, 800);
@@ -103,7 +103,7 @@ function displayMenuItem(){
   menuitem.forEach((item, index) => {
     if(item.style.display === 'flex'){
       item.style.animationName = 'reverseanim';
-      item.style.animationDuration = '1s';
+      item.style.animationDuration = '0.5s';
       index1.push(index);
     }
   });
@@ -120,13 +120,13 @@ function displayAbout(){
         
         document.getElementsByClassName("aboutPage")[0].style.display = 'flex';
         document.getElementsByClassName("aboutPage")[0].style.animationName = 'menuanim';
-        document.getElementsByClassName("aboutPage")[0].style.animationDuration = '2s';
-      }, 800);
+        document.getElementsByClassName("aboutPage")[0].style.animationDuration = '1s';
+      }, 400);
   }
   else{
     document.getElementsByClassName("aboutPage")[0].style.display = 'flex';
     document.getElementsByClassName("aboutPage")[0].style.animationName = 'menuanim';
-    document.getElementsByClassName("aboutPage")[0].style.animationDuration = '2s';
+    document.getElementsByClassName("aboutPage")[0].style.animationDuration = '1s';
   }
 }
 
@@ -140,13 +140,13 @@ function displaysome(){
         
         document.getElementsByClassName("educationPage")[0].style.display = 'flex';
         document.getElementsByClassName("educationPage")[0].style.animationName = 'menuanim';
-        document.getElementsByClassName("educationPage")[0].style.animationDuration = '2s';
-      }, 800);
+        document.getElementsByClassName("educationPage")[0].style.animationDuration = '0.5s';
+      }, 400);
   }
   else{
     document.getElementsByClassName("educationPage")[0].style.display = 'flex';
     document.getElementsByClassName("educationPage")[0].style.animationName = 'menuanim';
-    document.getElementsByClassName("educationPage")[0].style.animationDuration = '2s';
+    document.getElementsByClassName("educationPage")[0].style.animationDuration = '0.5s';
   }
   
 }
@@ -161,13 +161,13 @@ function displayInternship(){
         
         document.getElementsByClassName("internship")[0].style.display = 'flex';
         document.getElementsByClassName("internship")[0].style.animationName = 'menuanim';
-        document.getElementsByClassName("internship")[0].style.animationDuration = '2s';
-      }, 800);
+        document.getElementsByClassName("internship")[0].style.animationDuration = '0.5s';
+      }, 400);
   }
   else{
     document.getElementsByClassName("internship")[0].style.display = 'flex';
     document.getElementsByClassName("internship")[0].style.animationName = 'menuanim';
-    document.getElementsByClassName("internship")[0].style.animationDuration = '2s';
+    document.getElementsByClassName("internship")[0].style.animationDuration = '0.5s';
   }
 }
 
@@ -181,13 +181,13 @@ function displayExperience(){
         
         document.getElementsByClassName("experience")[0].style.display = 'flex';
         document.getElementsByClassName("experience")[0].style.animationName = 'menuanim';
-        document.getElementsByClassName("experience")[0].style.animationDuration = '2s';
-      }, 800);
+        document.getElementsByClassName("experience")[0].style.animationDuration = '0.5s';
+      }, 400);
   }
   else{
     document.getElementsByClassName("experience")[0].style.display = 'flex';
     document.getElementsByClassName("experience")[0].style.animationName = 'menuanim';
-    document.getElementsByClassName("experience")[0].style.animationDuration = '2s';
+    document.getElementsByClassName("experience")[0].style.animationDuration = '0.5s';
   }
 }
 
@@ -201,13 +201,13 @@ function displayProjects(){
         
         document.getElementsByClassName("projects")[0].style.display = 'flex';
         document.getElementsByClassName("projects")[0].style.animationName = 'menuanim';
-        document.getElementsByClassName("projects")[0].style.animationDuration = '2s';
-      }, 800);
+        document.getElementsByClassName("projects")[0].style.animationDuration = '0.5s';
+      }, 400);
   }
   else{
     document.getElementsByClassName("projects")[0].style.display = 'flex';
     document.getElementsByClassName("projects")[0].style.animationName = 'menuanim';
-    document.getElementsByClassName("projects")[0].style.animationDuration = '2s';
+    document.getElementsByClassName("projects")[0].style.animationDuration = '0.5s';
   }
 }
 
@@ -221,32 +221,32 @@ function displaySkills(){
         
         document.getElementsByClassName("skills")[0].style.display = 'flex';
         document.getElementsByClassName("skills")[0].style.animationName = 'menuanim';
-        document.getElementsByClassName("skills")[0].style.animationDuration = '2s';
-      }, 800);
+        document.getElementsByClassName("skills")[0].style.animationDuration = '0.5s';
+      }, 400);
   }
   else{
     document.getElementsByClassName("skills")[0].style.display = 'flex';
     document.getElementsByClassName("skills")[0].style.animationName = 'menuanim';
-    document.getElementsByClassName("skills")[0].style.animationDuration = '2s';
+    document.getElementsByClassName("skills")[0].style.animationDuration = '0.5s';
   }
 }
 
 function hidemenu(){
   let index = displayMenuItem();
   document.getElementById("sideNavBar").style.animationName = 'revnavbar';
-  document.getElementById("sideNavBar").style.animationDuration = '1s';
+  document.getElementById("sideNavBar").style.animationDuration = '0.5s';
   if(index.length !== 0){
     setTimeout(()=>{
       document.getElementsByClassName("menuitem")[index[0]].style.display = 'none';
       document.getElementById("sideNavBar").style.display = 'none';
       
-    }, 800);
+    }, 400);
     
   }
   else{
     setTimeout(()=>{
       document.getElementById("sideNavBar").style.display = 'none';
-    }, 800);
+    }, 400);
   }
   
 }
@@ -259,20 +259,20 @@ const showProject = (i => {
     }
   });
     document.getElementsByClassName("projectdiscription")[i].style.animationName = 'discanim';
-    document.getElementsByClassName("projectdiscription")[i].style.animationDuration = '1s';
+    document.getElementsByClassName("projectdiscription")[i].style.animationDuration = '0.5s';
     setTimeout(()=>{
       document.getElementsByClassName("projectdiscription")[i].style.display = 'block';
-    }, 600);
+    }, 400);
   
 });
 
 
 function closedesc(i){
   document.getElementsByClassName("projectdiscription")[i].style.animationName = 'revdesc';
-  document.getElementsByClassName("projectdiscription")[i].style.animationDuration = '0.6s';
+  document.getElementsByClassName("projectdiscription")[i].style.animationDuration = '0.5s';
   setTimeout(()=>{
     document.getElementsByClassName("projectdiscription")[i].style.display = 'none';
-  }, 500);
+  }, 400);
   
 }
 

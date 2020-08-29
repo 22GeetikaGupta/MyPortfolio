@@ -742,6 +742,22 @@ button:hover{
 	color: black;
 }
 
+.contact h2{
+	color: rgb(212,175,55);
+	letter-spacing: 5px;
+	text-align: center;
+	padding-bottom: 5px;
+	border-bottom: 2px solid rgb(212,175,55);
+}
+
+.mail{
+	height: 300px;
+	text-align: center;
+	letter-spacing: 5px;
+	padding-top: 20px;
+	font-size: 25px;
+}
+
 
 
 

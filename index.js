@@ -271,4 +271,24 @@ function displayCertificates(){
   }
 }
 
+function displayContact(){
+  let index1 = displayMenuItem();
+  if(index1.length!==0){
+      setTimeout(()=>{
+        for(let i=0; i<index1.length; i++){
+          document.getElementsByClassName("menuitem")[index1[i]].style.display = 'none';
+        }
+        
+        document.getElementsByClassName("contact")[0].style.display = 'flex';
+        document.getElementsByClassName("contact")[0].style.animationName = 'menuanim';
+        document.getElementsByClassName("contact")[0].style.animationDuration = '0.5s';
+      }, 400);
+  }
+  else{
+    document.getElementsByClassName("contact")[0].style.display = 'flex';
+    document.getElementsByClassName("contact")[0].style.animationName = 'menuanim';
+    document.getElementsByClassName("contact")[0].style.animationDuration = '0.5s';
+  }
+}
+
 initialSetup();

@@ -513,6 +513,7 @@ button:hover{
 
 .projects{
 	border-radius: 50px;
+	top: 5%;
 }
 
 .projects h2{
@@ -721,6 +722,7 @@ button:hover{
 	text-align: center;
 	padding-bottom: 5px;
 	border-bottom: 2px solid rgb(212,175,55);
+	
 }
 
 .certiPart{

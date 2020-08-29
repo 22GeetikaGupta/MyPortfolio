@@ -251,6 +251,24 @@ function hidemenu(){
   
 }
 
-
+function displayCertificates(){
+  let index1 = displayMenuItem();
+  if(index1.length!==0){
+      setTimeout(()=>{
+        for(let i=0; i<index1.length; i++){
+          document.getElementsByClassName("menuitem")[index1[i]].style.display = 'none';
+        }
+        
+        document.getElementsByClassName("certificates")[0].style.display = 'flex';
+        document.getElementsByClassName("certificates")[0].style.animationName = 'menuanim';
+        document.getElementsByClassName("certificates")[0].style.animationDuration = '0.5s';
+      }, 400);
+  }
+  else{
+    document.getElementsByClassName("certificates")[0].style.display = 'flex';
+    document.getElementsByClassName("certificates")[0].style.animationName = 'menuanim';
+    document.getElementsByClassName("certificates")[0].style.animationDuration = '0.5s';
+  }
+}
 
 initialSetup();

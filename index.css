@@ -711,5 +711,37 @@ button:hover{
   animation-delay: 0.5s;
 }
 
+.certificates{
+	top: 5%;
+}
+
+.certificates h2{
+	color: rgb(212,175,55);
+	letter-spacing: 5px;
+	text-align: center;
+	padding-bottom: 5px;
+	border-bottom: 2px solid rgb(212,175,55);
+}
+
+.certiPart{
+	margin: 10px;
+}
+
+.certificate{
+	background-image: linear-gradient(to right, #8DCCBD , #B2DAD0);
+	border-radius: 25px;
+	padding: 10px 20px;
+	margin: 15px;
+}
+
+.certificate h3{
+	color: white;
+}
+
+.certificate p{
+	color: black;
+}
+
+
 
 

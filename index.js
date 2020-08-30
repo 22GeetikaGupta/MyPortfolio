@@ -96,7 +96,7 @@ function displayMenuItem(){
     document.getElementById("sideNavBar").style.animationDuration = '0.5s';
     setTimeout(()=>{
       document.getElementById("sideNavBar").style.display='none';
-    }, 800);
+    }, 400);
   }
   const menuitem = document.querySelectorAll('.menuitem');
   let index1=[];
